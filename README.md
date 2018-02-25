@@ -1,4 +1,11 @@
 Párhuzamos Életrajzok
 =====================
 
-teszt tartalom
+# A cél
+# A feladat
+# Az eszközök
+## Adatgyűjtés
+## Adattisztítás
+## Adatvizualizáció
+## Disszemináció
+# A csapat
