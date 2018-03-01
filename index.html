@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Scrolling Nav - Start Bootstrap Template</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/scrolling-nav.css" rel="stylesheet">
+	<style>
+
+	.links line {
+	stroke: #999;
+	stroke-opacity: 0.6;
+	}
+
+	.nodes circle {
+	stroke: #fff;
+	stroke-width: 1.5px;
+	}
+
+	</style>
+	
+
+  </head>
+
+  <body id="page-top">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">Párhuzamos Életrajzok</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#about">A Kutatás</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#services">A módszertan</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#contact">Az eszközök</a>
+            </li>
+			<li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#team">A csapat</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <header class="bg-primary text-white">
+      <div class="container text-center">
+        <h1>Üdvözlünk a Párhuzamos Életrajzok honlapunkon!</h1>
+        <p class="lead">A landing page template freshly redesigned for Bootstrap 4</p>
+      </div>
+    </header>
+	<svg width="960" height="600"></svg>
+	<script src="https://d3js.org/d3.v4.min.js"></script>
+	<script>
+
+	var svg = d3.select("svg"),
+		width = +svg.attr("width"),
+		height = +svg.attr("height");
+
+	var color = d3.scaleOrdinal(d3.schemeCategory20);
+
+	var simulation = d3.forceSimulation()
+		.force("link", d3.forceLink().id(function(d) { return d.id; }))
+		.force("charge", d3.forceManyBody())
+		.force("center", d3.forceCenter(width / 2, height / 2));
+
+	d3.json("miserables.json", function(error, graph) {
+	if (error) throw error;
+
+	var link = svg.append("g")
+		.attr("class", "links")
+		.selectAll("line")
+		.data(graph.links)
+		.enter().append("line")
+		.attr("stroke-width", function(d) { return Math.sqrt(d.value); });
+
+	var node = svg.append("g")
+		.attr("class", "nodes")
+		.selectAll("circle")
+		.data(graph.nodes)
+		.enter().append("circle")
+		.attr("r", 5)
+		.attr("fill", function(d) { return color(d.group); })
+		.call(d3.drag()
+			.on("start", dragstarted)
+			.on("drag", dragged)
+			.on("end", dragended));
+
+	node.append("title")
+		.text(function(d) { return d.id; });
+
+	simulation
+		.nodes(graph.nodes)
+		.on("tick", ticked);
+
+	simulation.force("link")
+		.links(graph.links);
+
+	function ticked() {
+		link
+			.attr("x1", function(d) { return d.source.x; })
+			.attr("y1", function(d) { return d.source.y; })
+			.attr("x2", function(d) { return d.target.x; })
+			.attr("y2", function(d) { return d.target.y; });
+
+		node
+			.attr("cx", function(d) { return d.x; })
+			.attr("cy", function(d) { return d.y; });
+	}
+	});
+
+	function dragstarted(d) {
+	if (!d3.event.active) simulation.alphaTarget(0.3).restart();
+	d.fx = d.x;
+	d.fy = d.y;
+	}
+
+	function dragged(d) {
+	d.fx = d3.event.x;
+	d.fy = d3.event.y;
+	}
+
+	function dragended(d) {
+	if (!d3.event.active) simulation.alphaTarget(0);
+	d.fx = null;
+	d.fy = null;
+	}
+
+	</script>
+    <section id="about">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <h2>A kutatás</h2>
+            <p class="lead">This is a great place to talk about your webpage. This template is purposefully unstyled so you can use it as a boilerplate or starting point for you own landing page designs! This template features:</p>
+            <ul>
+              <li>Clickable nav links that smooth scroll to page sections</li>
+              <li>Responsive behavior when clicking nav links perfect for a one page website</li>
+              <li>Bootstrap's scrollspy feature which highlights which section of the page you're on in the navbar</li>
+              <li>Minimal custom CSS so you are free to explore your own unique design options</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="bg-light">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <h2>A módszertan</h2>
+            <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut optio velit inventore, expedita quo laboriosam possimus ea consequatur vitae, doloribus consequuntur ex. Nemo assumenda laborum vel, labore ut velit dignissimos.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <h2>Az eszközök</h2>
+            <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero odio fugiat voluptatem dolor, provident officiis, id iusto! Obcaecati incidunt, qui nihil beatae magnam et repudiandae ipsa exercitationem, in, quo totam.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+	
+	<section id="team">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <h2>A csapat</h2>
+            <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero odio fugiat voluptatem dolor, provident officiis, id iusto! Obcaecati incidunt, qui nihil beatae magnam et repudiandae ipsa exercitationem, in, quo totam.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-5 bg-dark">
+      <div class="container">
+        <p class="m-0 text-center text-white">Copyright &copy; Your Website 2017</p>
+      </div>
+      <!-- /.container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom JavaScript for this theme -->
+    <script src="js/scrolling-nav.js"></script>
+
+  </body>
+
+</html>
