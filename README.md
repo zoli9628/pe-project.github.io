@@ -1,4 +1,4 @@
-<text align="center"Párhuzamos Életrajzok>
+<text align="center"> Párhuzamos Életrajzok
 =====================
 
 <p align="center">
