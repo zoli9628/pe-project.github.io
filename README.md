@@ -32,4 +32,4 @@ _**A kutatás célja a Semmelweis Egyetem munkatársainak egyetemen kívüli mun
 * **Batta Balázs** - Adatbányász
 * **Pásztor Attila** - Adattisztító
 * **Németh Zoltán** - Projektmenedzser
-* **Merész Gergely** - Megbízó
+* **Merész Gergő** - Mentor
