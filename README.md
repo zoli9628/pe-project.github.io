@@ -1,8 +1,8 @@
-<text align="center"> Párhuzamos Életrajzok
+<p text align="center"> Párhuzamos Életrajzok <p>
 =====================
 
 <p align="center">
-  <img width="560" height="300" src="https://cdn.pixabay.com/photo/2017/02/20/14/18/health-2082630_960_720.jpg">
+  <img width="520" height="300" src="https://cdn.pixabay.com/photo/2017/02/20/14/18/health-2082630_960_720.jpg">
 </p>
 
 ## A cél
