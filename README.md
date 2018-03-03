@@ -1,6 +1,10 @@
 Párhuzamos Életrajzok
 =====================
 
+<p align="center">
+  <img width="460" height="300" src="https://cdn.pixabay.com/photo/2017/02/20/14/18/health-2082630_960_720.jpg">
+</p>
+
 ## A cél
 A Semmelweis Egyetem klinikumban dolgozó munkatársai nagy számban vállalnak másodállást a magánszférában, vagy más költségvetési szervnél. Ennek kiterjedése bizonytalan, a szervezeti egységek között is heterogén.
 
@@ -14,7 +18,7 @@ _**A kutatás célja a Semmelweis Egyetem munkatársainak egyetemen kívüli mun
 ## A feladat
 - Adatgyűjtés nyilvánosan elérhető felületeken (LinkedIn, Semmewleis Egyetem honlapja, stb.)
 - Eredmények online publikálása, illetve prezentálása (honlap, kiválasztott konferencia)
-> Mindezt nyílt forráskódú, ingyenes eszközök használatával hajtjuk végre.
+> Ezeket nyílt forráskódú, ingyenes eszközök használatával hajtjuk végre.
 
 ## Az eszközök
 * [RStudio](https://www.rstudio.com) - Az adattisztítási feladatokhoz, script írásához
@@ -23,11 +27,6 @@ _**A kutatás célja a Semmelweis Egyetem munkatársainak egyetemen kívüli mun
 * [HTML](https://www.w3schools.com/html/) - weboldal készítéséhez
 * [Start Bootstrap Scrolling Template](https://startbootstrap.com/template-overviews/scrolling-nav/) - Weboldal készítéséhez
 
-
-### Adatgyűjtés
-### Adattisztítás
-### Adatvizualizáció
-### Disszemináció
 ## A csapat
 * **Pataki Vivien** - Fejlesztő
 * **Batta Balázs** - Adatbányász
