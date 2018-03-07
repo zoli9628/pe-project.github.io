@@ -29,6 +29,6 @@ _**A kutatás célja a Semmelweis Egyetem munkatársainak egyetemen kívüli mun
 ## A csapat
 * **Pataki Vivien** - Fejlesztő
 * **Batta Balázs** - Adatbányász
-* **Pásztor Attila** - Adattisztító
+* **Pásztor Attila (P.A.)** - Adattisztító
 * **Németh Zoltán** - Projektmenedzser
 * **Merész Gergő** - Mentor
