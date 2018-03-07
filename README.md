@@ -1,4 +1,4 @@
-<h1 align="center">Párhuzamos Életrajzok</h1>
+﻿<h1 align="center">Párhuzamos Életrajzok</h1>
  
 <p align="center">
   <img width="520" height="300" src="https://cdn.pixabay.com/photo/2017/02/20/14/18/health-2082630_960_720.jpg">
@@ -29,6 +29,6 @@ _**A kutatás célja a Semmelweis Egyetem munkatársainak egyetemen kívüli mun
 ## A csapat
 * **Pataki Vivien** - Fejlesztő
 * **Batta Balázs** - Adatbányász
-* **Pásztor Attila** - Adattisztító
+* **Pásztor Attila (P.A.)** - Adattisztító
 * **Németh Zoltán** - Projektmenedzser
 * **Merész Gergő** - Mentor
