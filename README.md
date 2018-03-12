@@ -27,7 +27,7 @@ _**A kutatás célja a Semmelweis Egyetem munkatársainak egyetemen kívüli mun
 * [Start Bootstrap Scrolling Template](https://startbootstrap.com/template-overviews/scrolling-nav/) - Weboldal készítéséhez
 
 ## A csapat
-* **Pataki Vivien** - Fejlesztő
+* **Pataki Vivien PV** - Fejlesztő
 * **Batta Balázs** - Adatbányász
 * **Pásztor Attila** - Adattisztító
 * **Németh Zoltán** - Projektmenedzser
